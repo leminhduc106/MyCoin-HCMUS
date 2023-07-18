@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import Wallet from "./components/Wallet/Wallet"
+import Wallet from "./components/Wallet/Wallet";
+import BlockChain from './components/Blockchain/Blockchain';
 const SHA256 = require("crypto-js/sha256");
 
 const difficulty = 2; 
@@ -48,7 +49,7 @@ function App() {
     // History state
     const [history, setHistory] = useState([]); // from - to - coin - miner props
   
-    const [walletHistory, setWalletHistory] = useState([]);
+  // const [walletHistory, setWalletHistory] = useState([]);
   
   
     // // Mining difficulty
@@ -72,26 +73,26 @@ function App() {
       newListWallet.push(newWallet);
       setWallets(newListWallet);
       setIndexWalletActive(numberWalet); // Optional, can be omitted
-      setLogForWalletHistory(history, wallets[indexWalletActive].name);
-    }
+    // setLogForWalletHistory(history, wallets[indexWalletActive].name);
+  }
   
     //Function change wallet
     function getIdWallet(value){
       setIndexWalletActive(value.newId);
-      setLogForWalletHistory(history, wallets[indexWalletActive].name);
-    }
+    // setLogForWalletHistory(history, wallets[indexWalletActive].name);
+  }
   
-    function setLogForWalletHistory (history, name) {
-      const newWalletHistory = [];
-      let walletHistoryString = "";
-      for (let h in history){
-        if (h.from === name || h.to === name) {
-          walletHistoryString = `${h.from} to ${h.to} amount ${h.coin} coins`;
-          newWalletHistory.push(walletHistoryString);
-        }
-      }
-      setWalletHistory(newWalletHistory);
-    }
+   // function setLogForWalletHistory (history, name) {
+  //   const newWalletHistory = [];
+  //   let walletHistoryString = "";
+  //   for (let h in history){
+  //     if (h.from === name || h.to === name) {
+  //       walletHistoryString = `${h.from} to ${h.to} amount ${h.coin} coins`;
+  //       newWalletHistory.push(walletHistoryString);
+  //     }
+  //   }
+  //   setWalletHistory(newWalletHistory);
+  // }
   
     function removeDiv(clName){
       document.getElementsByClassName(clName)[0].classList.remove('xuathien');
@@ -160,7 +161,7 @@ function App() {
         let newListHistory = [...history];
         newListHistory.push(newHistory);
         setHistory(newListHistory);
-        setLogForWalletHistory(history, wallets[indexWalletActive].name);
+      // setLogForWalletHistory(history, wallets[indexWalletActive].name);
 
         // for (let b in history) {
         //   if (b.to === newWallet[walletActive].name){
@@ -212,6 +213,10 @@ function App() {
           </div> */}
 
 <div className="row">
+            <BlockChain 
+              blocks={block}
+              history={history} 
+            />  
             <Wallet 
               myWallet={wallets[indexWalletActive]} 
               wallets={wallets}
@@ -219,8 +224,8 @@ function App() {
               formCreate={formCreateWallet}
               getIdChangeWallet={getIdWallet}
               sendCoin={sendCoinWallet}
-              walletHistory={walletHistory}
-            />
+              // walletHistory={walletHistory}
+              />
           </div>
         </div>
       </div>
