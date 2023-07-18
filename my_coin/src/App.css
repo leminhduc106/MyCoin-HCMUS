@@ -73,6 +73,11 @@
 	display: none;
 }
 
+.card-view-history{
+	margin-bottom: 15px;
+	display: none;
+}
+
 .card-coin{
 	display: flex;
 	justify-content: space-between;
