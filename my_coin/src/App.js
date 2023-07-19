@@ -40,7 +40,7 @@ function App() {
 
   // Wallets state
   const [wallets, setWallets] = useState([
-    { id: 0, name: 'Hoang', coin: 100, transfer: 0, recieved: 100}
+    { id: 0, name: 'Minh Duc', coin: 100, transfer: 0, recieved: 100}
   ])
   
   // Index has active wallet state
