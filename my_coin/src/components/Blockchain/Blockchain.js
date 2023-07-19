@@ -57,7 +57,7 @@ function BlockChain(props) {
                     {showBlockFromEnd(blocks)}
                 </div>
             </div>
-  
+
             {/* View History transfer */}
             <div className={showHistory===true?"card shadow mb-3":"andi"}>
                 <div className="card-header-two">

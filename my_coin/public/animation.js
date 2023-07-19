@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
     
-    // 
     const sendcoin = document.getElementsByClassName('btnsendcoid')[0];
     let sendcoinform = document.getElementsByClassName('card-send-coin')[0];
     const exitsendcoin = document.getElementsByClassName('exitsendcoin')[0];
@@ -9,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function(){
     let cardview = document.getElementsByClassName('card-view')[0];
     const iconexit = document.getElementsByClassName('iconexit')[0];
 
-        // const btnviewhistory = document.getElementsByClassName('btnviewhistory')[0];
-    // let cardviewhistory = document.getElementsByClassName('card-view-history')[0];
+    // const btnviewhistory = document.getElementsByClassName('btnviewhistory')[0];
+    let cardviewhistory = document.getElementsByClassName('card-view-history')[0];
     // const iconexithistory = document.getElementsByClassName('iconexithistory')[0];
 
     const btncreatewallet = document.getElementsByClassName('btncreatewallet')[0];
@@ -20,7 +19,8 @@ document.addEventListener("DOMContentLoaded", function(){
     let cardcreatewallet = document.getElementsByClassName('cardcreatewallet')[0];
     let cardchangewallet = document.getElementsByClassName('cardchangewallet')[0];
 
- let formcreatewallet = document.getElementsByClassName('formcreatewallet')[0];    formcreatewallet.onclick = () =>{
+    let formcreatewallet = document.getElementsByClassName('formcreatewallet')[0];
+    formcreatewallet.onclick = () =>{
         formcreatewallet.reset();
     }
 
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function(){
         document.getElementById('formsendcoin').reset();
     }
 
-
+    // button click view statistics
     btnview.onclick = () =>{
     	cardview.classList.toggle('xuathien');
         sendcoinform.classList.remove('xuathien');
@@ -55,9 +55,8 @@ document.addEventListener("DOMContentLoaded", function(){
     	cardview.classList.remove('xuathien');
     }
 
-
-    // button click view history
-     // btnviewhistory.onclick = () =>{
+    // // button click view history
+    // btnviewhistory.onclick = () =>{
     // 	cardviewhistory.classList.toggle('xuathien');
     //     cardview.classList.remove('xuathien');
     //     sendcoinform.classList.remove('xuathien');
@@ -69,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function(){
     // iconexithistory.onclick = () =>{
     // 	cardviewhistory.classList.remove('xuathien');
     // }
+
     
     
     btncreatewallet.onclick = () =>{
