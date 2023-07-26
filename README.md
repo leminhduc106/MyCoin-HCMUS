@@ -2,14 +2,18 @@
 
 Họ và tên: Lê Minh Đức - MSSV: 19127369
 
-Bài tập cá nhân Blockchain: Xây dựng hệ thống tiền điện tử MyCoin Các công nghệ mới trong phát triển phần mềm
+Bài tập cá nhân Blockchain: Xây dựng hệ thống tiền điện tử MyCoin 
+
+Môn học: Các công nghệ mới trong phát triển phần mềm
 
 Link demo: https://youtu.be/FiF7JSDenxg
 # Cài đặt modules/dependencies
 ### `npm install`
 
 ## Chạy chương trình
-### `npm start`
+### `npm run build`
+Sau đó gõ 
+### `serve -s build`
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 # Các chức năng của project
